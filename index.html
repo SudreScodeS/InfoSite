@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Clínica Vida Plena — atendimento humanizado com especialistas em clínico geral, pediatria, dermatologia e mais. Conheça nossa equipe e fale conosco.">
+  <title>Clínica Vida Plena — Cuidado e bem-estar</title>
+
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem("theme") === "dark") {
+          document.documentElement.setAttribute("data-scheme", "dark");
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="./favicon-light.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="./favicon-dark.png" media="(prefers-color-scheme: dark)">
+
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/components.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Ir para o conteúdo</a>
+
+  <!-- 1. Header -->
+  <header class="header" role="banner">
+    <div class="container header__inner">
+      <a href="#" class="wordmark" aria-label="Clínica Vida Plena — página inicial">
+        <span class="wordmark__g">V</span>ida Plena
+      </a>
+
+      <nav class="header__nav" aria-label="Navegação principal">
+        <div class="header__links" id="nav-links">
+          <a href="#servicos">Serviços</a>
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#equipe">Equipe</a>
+          <a href="#depoimentos">Depoimentos</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contato" class="header__cta-mobile btn btn--primary btn--sm">Fale conosco</a>
+        </div>
+
+        <button
+          type="button"
+          class="icon-btn icon-btn--ghost"
+          id="theme-toggle"
+          aria-label="Ativar modo escuro"
+          aria-pressed="false"
+        >
+          <svg class="icon theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+          </svg>
+          <svg class="icon theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+        </button>
+
+        <a href="#contato" class="btn btn--primary btn--sm header__cta-desktop">Fale conosco</a>
+
+        <button
+          class="icon-btn icon-btn--ghost header__menu-toggle"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="nav-links"
+        >
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <line x1="4" x2="20" y1="6" y2="6"/>
+            <line x1="4" x2="20" y1="12" y2="12"/>
+            <line x1="4" x2="20" y1="18" y2="18"/>
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- 2. Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__gradient" aria-hidden="true"></div>
+      <div class="container hero__inner hero__inner--solo">
+        <div class="hero__content reveal">
+          <h1 id="hero-title" class="text-display hero__title">
+            Cuidado que cabe na sua rotina
+          </h1>
+          <p class="hero__subtitle">
+            Especialistas dedicados ao seu bem-estar, em um ambiente acolhedor.
+            Conheça nossos serviços e fale com a equipe quando precisar.
+          </p>
+          <div class="hero__actions">
+            <div class="hero__actions-row">
+              <a href="#contato" class="btn btn--gradient btn--lg">Fale conosco</a>
+              <a href="#servicos" class="btn btn--secondary btn--lg">Ver serviços</a>
+            </div>
+            <a href="#" class="btn btn--ghost btn--lg hero__whatsapp" data-whatsapp>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>
+              </svg>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Prova social -->
+    <section class="stats" aria-label="Números da clínica">
+      <div class="container stats__grid reveal">
+        <div>
+          <p class="stats__value tabular-nums">12.400+</p>
+          <p class="stats__label">Consultas realizadas</p>
+        </div>
+        <div>
+          <p class="stats__value tabular-nums">18</p>
+          <p class="stats__label">Especialistas</p>
+        </div>
+        <div>
+          <p class="stats__value tabular-nums">4.9</p>
+          <p class="stats__label">Avaliação média</p>
+        </div>
+        <div>
+          <p class="stats__value tabular-nums">15+</p>
+          <p class="stats__label">Anos de experiência</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Serviços -->
+    <section id="servicos" class="section" aria-labelledby="servicos-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2 id="servicos-title" class="text-h2">Serviços</h2>
+          <p class="text-secondary">Especialidades pensadas para cuidar de você e da sua família.</p>
+        </header>
+
+        <div class="grid grid-3 services-grid">
+          <article class="card card--service reveal">
+            <div class="card__badge-slot">
+              <span class="badge badge--tag">Mais procurado</span>
+            </div>
+            <h3 class="card__title">Clínico Geral</h3>
+            <p class="text-sm text-secondary card__desc">Consulta de rotina, check-up e encaminhamentos.</p>
+            <p class="card__price money-text tabular-nums" data-money-cents="18000" data-currency="BRL"></p>
+          </article>
+
+          <article class="card card--service reveal">
+            <div class="card__badge-slot" aria-hidden="true"></div>
+            <h3 class="card__title">Pediatria</h3>
+            <p class="text-sm text-secondary card__desc">Acompanhamento infantil e vacinação.</p>
+            <p class="card__price money-text tabular-nums" data-money-cents="22000" data-currency="BRL"></p>
+          </article>
+
+          <article class="card card--service reveal">
+            <div class="card__badge-slot" aria-hidden="true"></div>
+            <h3 class="card__title">Dermatologia</h3>
+            <p class="text-sm text-secondary card__desc">Pele, cabelo e procedimentos estéticos.</p>
+            <p class="card__price money-text tabular-nums" data-money-cents="25000" data-currency="BRL"></p>
+          </article>
+
+          <article class="card card--service reveal">
+            <div class="card__badge-slot" aria-hidden="true"></div>
+            <h3 class="card__title">Ginecologia</h3>
+            <p class="text-sm text-secondary card__desc">Saúde da mulher em todas as fases.</p>
+            <p class="card__price money-text tabular-nums" data-money-cents="23000" data-currency="BRL"></p>
+          </article>
+
+          <article class="card card--service reveal">
+            <div class="card__badge-slot" aria-hidden="true"></div>
+            <h3 class="card__title">Psicologia</h3>
+            <p class="text-sm text-secondary card__desc">Atendimento presencial e online.</p>
+            <p class="card__price money-text tabular-nums" data-money-cents="20000" data-currency="BRL"></p>
+          </article>
+
+          <article class="card card--service reveal">
+            <div class="card__badge-slot" aria-hidden="true"></div>
+            <h3 class="card__title">Nutrição</h3>
+            <p class="text-sm text-secondary card__desc">Plano alimentar personalizado.</p>
+            <p class="card__price money-text tabular-nums" data-money-cents="15000" data-currency="BRL"></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Como funciona -->
+    <section id="como-funciona" class="section section--muted" aria-labelledby="como-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2 id="como-title" class="text-h2">Como funciona</h2>
+          <p class="text-secondary">Do primeiro contato ao atendimento, de forma simples.</p>
+        </header>
+
+        <ol class="stepper reveal" aria-label="Passos do atendimento">
+          <li class="stepper__step stepper__step--completed">
+            <div class="stepper__top">
+              <span class="stepper__rail" aria-hidden="true"></span>
+              <span class="stepper__indicator">
+                <svg class="icon icon--sm" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              <span class="stepper__rail stepper__rail--done" aria-hidden="true"></span>
+            </div>
+            <span class="stepper__label">Entre em contato</span>
+            <span class="stepper__desc">Envie uma mensagem ou fale pelo WhatsApp</span>
+          </li>
+          <li class="stepper__step stepper__step--current" aria-current="step">
+            <div class="stepper__top">
+              <span class="stepper__rail stepper__rail--done" aria-hidden="true"></span>
+              <span class="stepper__indicator">2</span>
+              <span class="stepper__rail" aria-hidden="true"></span>
+            </div>
+            <span class="stepper__label">Combinamos o horário</span>
+            <span class="stepper__desc">Nossa equipe confirma data e profissional</span>
+          </li>
+          <li class="stepper__step stepper__step--upcoming">
+            <div class="stepper__top">
+              <span class="stepper__rail" aria-hidden="true"></span>
+              <span class="stepper__indicator">3</span>
+              <span class="stepper__rail" aria-hidden="true"></span>
+            </div>
+            <span class="stepper__label">Compareça à clínica</span>
+            <span class="stepper__desc">Atendimento acolhedor no horário marcado</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 6. Equipe -->
+    <section id="equipe" class="section" aria-labelledby="equipe-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2 id="equipe-title" class="text-h2">Nossa equipe</h2>
+          <p class="text-secondary">Profissionais experientes, prontos para cuidar de você.</p>
+        </header>
+
+        <div class="grid grid-4">
+          <article class="team-card reveal">
+            <span class="avatar avatar--lg" data-initials="AS">
+              <img src="./assets/team-1.svg" alt="Dra. Ana Silva" width="64" height="64">
+            </span>
+            <p class="team-card__name">Dra. Ana Silva</p>
+            <p class="team-card__role">Clínico Geral · CRM 12345</p>
+          </article>
+
+          <article class="team-card reveal">
+            <span class="avatar avatar--lg" data-initials="RC">
+              <img src="./assets/team-2.svg" alt="Dr. Ricardo Costa" width="64" height="64">
+            </span>
+            <p class="team-card__name">Dr. Ricardo Costa</p>
+            <p class="team-card__role">Pediatra · CRM 23456</p>
+          </article>
+
+          <article class="team-card reveal">
+            <span class="avatar avatar--lg" data-initials="MF">
+              <img src="./assets/team-3.svg" alt="Dra. Marina Ferreira" width="64" height="64">
+            </span>
+            <p class="team-card__name">Dra. Marina Ferreira</p>
+            <p class="team-card__role">Dermatologista · CRM 34567</p>
+          </article>
+
+          <article class="team-card reveal">
+            <span class="avatar avatar--lg" data-initials="PL">
+              <img src="./assets/team-4.svg" alt="Dr. Paulo Lima" width="64" height="64">
+            </span>
+            <p class="team-card__name">Dr. Paulo Lima</p>
+            <p class="team-card__role">Psicólogo · CRP 45678</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Depoimentos -->
+    <section id="depoimentos" class="section section--muted" aria-labelledby="depoimentos-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2 id="depoimentos-title" class="text-h2">O que dizem nossos pacientes</h2>
+        </header>
+
+        <div class="grid grid-3">
+          <blockquote class="card reveal">
+            <span class="badge badge--tag">Clínico Geral</span>
+            <p class="testimonial__quote mt-4">
+              "A Dra. Ana foi atenciosa e resolveu tudo na primeira consulta. Ambiente calmo e equipe muito gentil."
+            </p>
+            <footer class="testimonial__author">
+              <span class="avatar" data-initials="CM">
+                <span class="avatar__initials">CM</span>
+              </span>
+              <div>
+                <cite class="testimonial__name">Carla Mendes</cite>
+                <p class="testimonial__meta">Paciente desde 2024</p>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="card reveal">
+            <span class="badge badge--tag">Pediatria</span>
+            <p class="testimonial__quote mt-4">
+              "Levar meu filho ao pediatra nunca foi tão tranquilo. Explicam tudo com paciência e cuidado."
+            </p>
+            <footer class="testimonial__author">
+              <span class="avatar" data-initials="JS">
+                <span class="avatar__initials">JS</span>
+              </span>
+              <div>
+                <cite class="testimonial__name">João Santos</cite>
+                <p class="testimonial__meta">Paciente desde 2023</p>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="card reveal">
+            <span class="badge badge--tag">Psicologia</span>
+            <p class="testimonial__quote mt-4">
+              "Ambiente acolhedor e profissionais de confiança. Recomendo para quem busca cuidado de verdade."
+            </p>
+            <footer class="testimonial__author">
+              <span class="avatar" data-initials="LP">
+                <span class="avatar__initials">LP</span>
+              </span>
+              <div>
+                <cite class="testimonial__name">Luciana Pereira</cite>
+                <p class="testimonial__meta">Paciente desde 2025</p>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. FAQ -->
+    <section id="faq" class="section" aria-labelledby="faq-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2 id="faq-title" class="text-h2">Perguntas frequentes</h2>
+        </header>
+
+        <div class="faq-list reveal">
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-1" id="faq-trigger-1">
+              Como marco uma consulta?
+              <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__panel" id="faq-1" role="region" aria-labelledby="faq-trigger-1">
+              <div class="faq-item__content">
+                Envie uma mensagem pelo formulário de contato ou pelo WhatsApp.
+                Nossa recepção retorna para confirmar a especialidade e o melhor horário.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-2" id="faq-trigger-2">
+              Posso remarcar ou cancelar?
+              <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__panel" id="faq-2" role="region" aria-labelledby="faq-trigger-2">
+              <div class="faq-item__content">
+                Sim. Pedimos aviso com pelo menos 24 horas de antecedência.
+                Entre em contato pelo telefone ou WhatsApp.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-3" id="faq-trigger-3">
+              Quais convênios são aceitos?
+              <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__panel" id="faq-3" role="region" aria-labelledby="faq-trigger-3">
+              <div class="faq-item__content">
+                Aceitamos Unimed, Bradesco Saúde, SulAmérica, Amil e atendimento particular.
+                Consulte a recepção para verificar cobertura da sua especialidade.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-4" id="faq-trigger-4">
+              Onde fica a clínica?
+              <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__panel" id="faq-4" role="region" aria-labelledby="faq-trigger-4">
+              <div class="faq-item__content">
+                Rua das Flores, 123 — Centro, São Paulo/SP. Estacionamento conveniado no edifício.
+                Metrô Sé, 5 minutos a pé.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Contato -->
+    <section id="contato" class="section contact" aria-labelledby="contato-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2 id="contato-title" class="text-h2">Fale conosco</h2>
+          <p class="text-secondary">Envie uma mensagem ou fale direto pelo WhatsApp.</p>
+        </header>
+
+        <div class="contact__layout reveal">
+          <aside class="contact__aside">
+            <div class="card contact__info">
+              <h3 class="text-h3">Canais de atendimento</h3>
+              <ul class="contact__list">
+                <li>
+                  <span class="contact__list-label">Telefone</span>
+                  <a href="tel:+551132221234">(11) 3222-1234</a>
+                </li>
+                <li>
+                  <span class="contact__list-label">E-mail</span>
+                  <a href="mailto:contato@vidaplena.com.br">contato@vidaplena.com.br</a>
+                </li>
+                <li>
+                  <span class="contact__list-label">Endereço</span>
+                  <span>Rua das Flores, 123 — Centro, São Paulo/SP</span>
+                </li>
+                <li>
+                  <span class="contact__list-label">Horário</span>
+                  <span>Seg–Sex, 8h–19h · Sáb, 8h–12h</span>
+                </li>
+              </ul>
+              <a href="#" class="btn btn--secondary" data-whatsapp>
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>
+                </svg>
+                Conversar no WhatsApp
+              </a>
+            </div>
+          </aside>
+
+          <form id="contact-form" class="contact__form" novalidate>
+            <div class="form-field">
+              <label class="form-field__label" for="field-name">Nome completo</label>
+              <input class="input" type="text" id="field-name" name="name" autocomplete="name" required aria-describedby="error-name">
+              <span class="form-field__error" id="error-name" hidden>Digite seu nome completo.</span>
+            </div>
+
+            <div class="contact__form-row">
+              <div class="form-field">
+                <label class="form-field__label" for="field-email">E-mail</label>
+                <input class="input" type="email" id="field-email" name="email" autocomplete="email" required aria-describedby="error-email">
+                <span class="form-field__error" id="error-email" hidden>Informe um e-mail válido.</span>
+              </div>
+
+              <div class="form-field">
+                <label class="form-field__label" for="field-phone">Telefone <span class="text-muted">(opcional)</span></label>
+                <input class="input" type="tel" id="field-phone" name="phone" autocomplete="tel" placeholder="(11) 99999-9999">
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label class="form-field__label" for="field-message">Mensagem</label>
+              <textarea class="textarea" id="field-message" name="message" rows="4" required aria-describedby="error-message" placeholder="Como podemos ajudar?"></textarea>
+              <span class="form-field__error" id="error-message" hidden>Escreva uma mensagem com pelo menos 10 caracteres.</span>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--lg" id="submit-contact">
+              <span class="btn__label">Enviar mensagem</span>
+              <span class="btn__spinner" aria-hidden="true">
+                <span class="spinner spinner--sm"></span>
+              </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 10. Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <a href="#" class="wordmark" aria-label="Clínica Vida Plena — página inicial">
+            <span class="wordmark__g">V</span>ida Plena
+          </a>
+          <p class="footer__desc">
+            Clínica Vida Plena — atendimento humanizado com especialistas dedicados ao seu bem-estar.
+          </p>
+        </div>
+
+        <div>
+          <p class="footer__heading">Links</p>
+          <nav class="footer__links" aria-label="Links do rodapé">
+            <a href="#servicos">Serviços</a>
+            <a href="#equipe">Equipe</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contato">Contato</a>
+          </nav>
+        </div>
+
+        <div>
+          <p class="footer__heading">Contato</p>
+          <nav class="footer__links" aria-label="Contato">
+            <a href="tel:+551132221234">(11) 3222-1234</a>
+            <a href="mailto:contato@vidaplena.com.br">contato@vidaplena.com.br</a>
+            <a href="#" data-whatsapp>WhatsApp</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">
+          &copy; 2026 Clínica Vida Plena.
+        </p>
+        <a
+          class="footer__dev"
+          href="https://github.com/SudreScodeS/SudreS-Codes-Site"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Desenvolvido por VS — abrir site do desenvolvedor"
+          data-developer-link
+        >
+          <span class="footer__dev-label">Desenvolvido por</span>
+          <img
+            class="footer__dev-logo"
+            src="./LogoE-VS.png"
+            alt="VS"
+            width="967"
+            height="376"
+          >
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="./js/config.js" defer></script>
+  <script src="./js/main.js" defer></script>
+</body>
+</html>

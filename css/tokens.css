@@ -1,0 +1,171 @@
+/**
+ * GeSis Agenda — Design Tokens (preset editorial)
+ * Base para todas as landing pages de repertório.
+ */
+
+:root {
+  /* ── Brand ─────────────────────────────────────────────── */
+  --color-primary: oklch(0.48 0.15 262);
+  --color-primary-hover: oklch(0.42 0.15 262);
+  --color-primary-active: oklch(0.38 0.15 262);
+  --color-accent: oklch(0.74 0.13 55);
+  --color-accent-hover: oklch(0.68 0.13 55);
+  --gradient-brand: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+
+  /* ── Neutrals (cold, low saturation, hue 262) ──────────── */
+  --color-bg: oklch(0.99 0.005 262);
+  --color-bg-subtle: oklch(0.97 0.008 262);
+  --color-bg-muted: oklch(0.94 0.01 262);
+  --color-surface: oklch(1 0 262);
+  --color-border: oklch(0.88 0.012 262);
+  --color-border-strong: oklch(0.78 0.015 262);
+  --color-text: oklch(0.22 0.02 262);
+  --color-text-secondary: oklch(0.45 0.015 262);
+  --color-text-muted: oklch(0.58 0.012 262);
+  --color-text-inverse: oklch(0.99 0.005 262);
+
+  /* ── Semantic ──────────────────────────────────────────── */
+  --color-success: oklch(0.55 0.14 145);
+  --color-success-bg: oklch(0.95 0.04 145);
+  --color-warning: oklch(0.72 0.14 75);
+  --color-warning-bg: oklch(0.96 0.04 75);
+  --color-error: oklch(0.55 0.2 25);
+  --color-error-bg: oklch(0.96 0.04 25);
+  --color-info: oklch(0.55 0.12 240);
+  --color-info-bg: oklch(0.95 0.04 240);
+
+  /* ── Typography — family ───────────────────────────────── */
+  --font-sans: "Geist", system-ui, -apple-system, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
+
+  /* ── Typography — weights ────────────────────────────────── */
+  --font-weight-body: 400;
+  --font-weight-label: 500;
+  --font-weight-heading: 600;
+
+  /* ── Typography — scale (closed) ─────────────────────────── */
+  --text-display: 2.5rem;
+  --text-display-lh: 1.1;
+  --text-display-ls: -0.02em;
+
+  --text-h1: 2rem;
+  --text-h1-lh: 1.15;
+  --text-h1-ls: -0.015em;
+
+  --text-h2: 1.5rem;
+  --text-h2-lh: 1.2;
+  --text-h2-ls: -0.01em;
+
+  --text-h3: 1.25rem;
+  --text-h3-lh: 1.3;
+  --text-h3-ls: -0.005em;
+
+  --text-body: 1rem;
+  --text-body-lh: 1.5;
+  --text-body-ls: 0;
+
+  --text-sm: 0.875rem;
+  --text-sm-lh: 1.5;
+  --text-sm-ls: 0;
+
+  --text-xs: 0.75rem;
+  --text-xs-lh: 1.4;
+  --text-xs-ls: 0.01em;
+
+  /* ── Spacing (4px base) ──────────────────────────────────── */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* ── Density (public profile) ────────────────────────────── */
+  --density-scale: 1.125;
+  --space-component-xs: calc(var(--space-2) * var(--density-scale));
+  --space-component-sm: calc(var(--space-3) * var(--density-scale));
+  --space-component-md: calc(var(--space-4) * var(--density-scale));
+  --space-component-lg: calc(var(--space-6) * var(--density-scale));
+  --space-component-xl: calc(var(--space-8) * var(--density-scale));
+
+  /* ── Control heights (public profile) ────────────────────── */
+  --control-height-sm: 40px;
+  --control-height-md: 44px;
+  --control-height-lg: 52px;
+
+  /* ── Radius ──────────────────────────────────────────────── */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* ── Shadow ──────────────────────────────────────────────── */
+  --shadow-none: none;
+  --shadow-sm: 0 1px 3px oklch(0.22 0.02 262 / 0.06), 0 1px 2px oklch(0.22 0.02 262 / 0.04);
+  --shadow-md: 0 4px 12px oklch(0.22 0.02 262 / 0.08), 0 2px 4px oklch(0.22 0.02 262 / 0.04);
+  --shadow-lg: 0 12px 32px oklch(0.22 0.02 262 / 0.12), 0 4px 8px oklch(0.22 0.02 262 / 0.06);
+
+  /* ── Animation ───────────────────────────────────────────── */
+  --duration-fast: 120ms;
+  --duration-base: 180ms;
+  --duration-slow: 240ms;
+  --ease-in: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out: cubic-bezier(0.4, 0, 1, 1);
+
+  /* ── Icons ───────────────────────────────────────────────── */
+  --icon-sm: 16px;
+  --icon-md: 20px;
+  --icon-lg: 24px;
+
+  /* ── Layout ──────────────────────────────────────────────── */
+  --container-max: 1120px;
+  --header-height: 72px;
+}
+
+/* ── Dark scheme ───────────────────────────────────────────── */
+:root[data-scheme="dark"] {
+  --color-primary: oklch(0.68 0.14 262);
+  --color-primary-hover: oklch(0.74 0.13 262);
+  --color-primary-active: oklch(0.62 0.14 262);
+  --color-accent: oklch(0.78 0.12 55);
+  --color-accent-hover: oklch(0.82 0.11 55);
+  --gradient-brand: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+
+  --color-bg: oklch(0.18 0.02 262);
+  --color-bg-subtle: oklch(0.22 0.02 262);
+  --color-bg-muted: oklch(0.26 0.02 262);
+  --color-surface: oklch(0.24 0.02 262);
+  --color-border: oklch(0.35 0.02 262);
+  --color-border-strong: oklch(0.45 0.02 262);
+  --color-text: oklch(0.95 0.01 262);
+  --color-text-secondary: oklch(0.72 0.015 262);
+  --color-text-muted: oklch(0.58 0.012 262);
+  --color-text-inverse: oklch(0.18 0.02 262);
+
+  --color-success: oklch(0.72 0.14 145);
+  --color-success-bg: oklch(0.28 0.04 145);
+  --color-warning: oklch(0.8 0.12 75);
+  --color-warning-bg: oklch(0.3 0.04 75);
+  --color-error: oklch(0.7 0.16 25);
+  --color-error-bg: oklch(0.28 0.04 25);
+  --color-info: oklch(0.72 0.1 240);
+  --color-info-bg: oklch(0.28 0.04 240);
+
+  --shadow-sm: 0 1px 3px oklch(0 0 0 / 0.3), 0 1px 2px oklch(0 0 0 / 0.2);
+  --shadow-md: 0 4px 12px oklch(0 0 0 / 0.4), 0 2px 4px oklch(0 0 0 / 0.25);
+  --shadow-lg: 0 12px 32px oklch(0 0 0 / 0.5), 0 4px 8px oklch(0 0 0 / 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-base: 0ms;
+    --duration-slow: 0ms;
+  }
+}
