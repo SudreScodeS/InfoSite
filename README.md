@@ -21,6 +21,21 @@ Sem build. Pronto para Cloudflare Pages e GitHub Pages.
 └── README.md
 ```
 
+## Imagens
+
+Os slots cinza com borda tracejada são placeholders. Cada um tem:
+
+- **Label** — onde a foto entra no layout
+- **Prompt** — termo de busca (Unsplash / Adobe Stock / fotógrafo)
+
+Quando tiver o arquivo, troque o `media-slot__frame` por:
+
+```html
+<img src="./assets/hero.jpg" alt="Recepção da Clínica Vida Plena">
+```
+
+Pastas sugeridas: `assets/hero.jpg`, `assets/espaco-*.jpg`, `assets/equipe-*.jpg`.
+
 ## Configuração rápida
 
 Edite [`js/config.js`](js/config.js):
