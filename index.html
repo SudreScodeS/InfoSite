@@ -84,10 +84,9 @@
 
     <!-- Hero -->
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero__media">
-        <figure class="media-slot media-slot--hero">
-          <img src="./assets/hero.jpg" alt="Recepção da Clínica Vida Plena" width="1920" height="1080">
-        </figure>
+      <div class="hero__media" aria-hidden="true">
+        <img src="./assets/hero.jpg" alt="" width="1920" height="1080">
+        <div class="hero__scrim"></div>
       </div>
 
       <div class="container hero__content">
@@ -101,8 +100,8 @@
         </p>
         <div class="hero__actions">
           <div class="hero__actions-row">
-            <a href="#contato" class="btn btn--primary btn--lg">Falar com a recepção</a>
-            <a href="#servicos" class="btn btn--secondary btn--lg">Ver especialidades</a>
+            <a href="#contato" class="btn btn--gradient btn--lg">Falar com a recepção</a>
+            <a href="#servicos" class="btn btn--secondary btn--lg hero__btn-secondary">Ver especialidades</a>
           </div>
           <a href="#" class="btn btn--ghost hero__whatsapp" data-whatsapp>WhatsApp</a>
         </div>
