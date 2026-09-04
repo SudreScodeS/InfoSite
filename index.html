@@ -23,23 +23,23 @@
   <link rel="icon" href="./favicon-light.png" media="(prefers-color-scheme: light)">
   <link rel="icon" href="./favicon-dark.png" media="(prefers-color-scheme: dark)">
 
-  <link rel="stylesheet" href="./css/tokens.css?v=20260903">
-  <link rel="stylesheet" href="./css/base.css?v=20260903">
-  <link rel="stylesheet" href="./css/components.css?v=20260903">
+  <link rel="stylesheet" href="./css/tokens.css?v=20260904b">
+  <link rel="stylesheet" href="./css/base.css?v=20260904b">
+  <link rel="stylesheet" href="./css/components.css?v=20260904b">
   <style>
-    /* Critical hero layout — evita imagem gigante se o CSS principal atrasar/cachear */
+    /* Critical hero — background-image, sem <img> no fluxo */
     .hero {
       position: relative;
       display: flex;
-      align-items: flex-end;
+      align-items: center;
       justify-content: center;
-      min-height: 85vh;
-      max-height: 860px;
+      min-height: 70vh;
+      max-height: 640px;
       overflow: hidden;
       padding-top: 72px;
+      box-sizing: border-box;
     }
     .hero__media,
-    .hero__media img,
     .hero__scrim {
       position: absolute;
       top: 0;
@@ -47,19 +47,31 @@
       bottom: 0;
       left: 0;
     }
-    .hero__media img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
+    .hero__media {
+      z-index: 0;
+      background-color: #1a1c24;
+      background-image: url("./assets/hero.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .hero__scrim {
+      z-index: 1;
+      background: linear-gradient(
+        180deg,
+        rgba(22, 24, 32, 0.45) 0%,
+        rgba(22, 24, 32, 0.35) 40%,
+        rgba(18, 20, 28, 0.82) 100%
+      );
+      pointer-events: none;
     }
     .hero__content {
       position: relative;
-      z-index: 1;
+      z-index: 2;
       width: 100%;
       max-width: 720px;
       margin: 0 auto;
-      padding: 64px 24px 80px;
+      padding: 48px 24px 56px;
       text-align: center;
       color: #f7f7fb;
     }
@@ -122,10 +134,12 @@
 
     <!-- Hero -->
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero__media" aria-hidden="true">
-        <img src="./assets/hero.jpg" alt="" width="1920" height="1080">
-        <div class="hero__scrim"></div>
-      </div>
+      <div
+        class="hero__media"
+        role="img"
+        aria-label="Recepção da Clínica Vida Plena"
+      ></div>
+      <div class="hero__scrim" aria-hidden="true"></div>
 
       <div class="container hero__content">
         <p class="hero__brand">Clínica Vida Plena</p>
