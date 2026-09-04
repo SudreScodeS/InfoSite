@@ -32,12 +32,14 @@ body {
   background-color: var(--color-bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 img,
 svg {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -66,32 +68,33 @@ select,
 textarea {
   font: inherit;
   color: inherit;
+  max-width: 100%;
 }
 
 /* ── Typography utilities ──────────────────────────────────── */
 .text-display {
-  font-size: var(--text-display);
+  font-size: clamp(1.75rem, 1.35rem + 2vw, var(--text-display));
   line-height: var(--text-display-lh);
   letter-spacing: var(--text-display-ls);
   font-weight: var(--font-weight-heading);
 }
 
 .text-h1 {
-  font-size: var(--text-h1);
+  font-size: clamp(1.5rem, 1.25rem + 1.2vw, var(--text-h1));
   line-height: var(--text-h1-lh);
   letter-spacing: var(--text-h1-ls);
   font-weight: var(--font-weight-heading);
 }
 
 .text-h2 {
-  font-size: var(--text-h2);
+  font-size: clamp(1.25rem, 1.1rem + 0.8vw, var(--text-h2));
   line-height: var(--text-h2-lh);
   letter-spacing: var(--text-h2-ls);
   font-weight: var(--font-weight-heading);
 }
 
 .text-h3 {
-  font-size: var(--text-h3);
+  font-size: clamp(1.1rem, 1.02rem + 0.4vw, var(--text-h3));
   line-height: var(--text-h3-lh);
   letter-spacing: var(--text-h3-ls);
   font-weight: var(--font-weight-heading);
@@ -129,18 +132,19 @@ textarea {
   width: 100%;
   max-width: var(--container-max);
   margin-inline: auto;
-  padding-inline: var(--space-component-lg);
+  padding-inline: clamp(var(--space-4), 4vw, var(--space-component-lg));
 }
 
 .section {
-  padding-block: var(--space-20);
+  padding-block: clamp(var(--space-12), 8vw, var(--space-20));
 }
 
 .section-header {
   text-align: center;
   max-width: 640px;
   margin-inline: auto;
-  margin-bottom: var(--space-12);
+  margin-bottom: clamp(var(--space-8), 5vw, var(--space-12));
+  padding-inline: var(--space-2);
 }
 
 .section-header .text-h2 {
@@ -149,53 +153,44 @@ textarea {
 
 .grid {
   display: grid;
-  gap: var(--space-component-lg);
+  gap: clamp(var(--space-4), 3vw, var(--space-component-lg));
 }
 
 .grid-2 {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .grid-3 {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .grid-4 {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
   .grid-2,
   .grid-3,
   .grid-4 {
-    grid-template-columns: 1fr;
-  }
-
-  .text-display {
-    font-size: var(--text-h1);
-    line-height: var(--text-h1-lh);
-    letter-spacing: var(--text-h1-ls);
-  }
-
-  .section {
-    padding-block: var(--space-12);
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .grid-3,
-  .grid-4 {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
 /* ── Wordmark ──────────────────────────────────────────────── */
 .wordmark {
-  font-size: var(--text-h3);
+  font-size: clamp(1.1rem, 1rem + 0.4vw, var(--text-h3));
   font-weight: var(--font-weight-heading);
   letter-spacing: var(--text-h3-ls);
   color: var(--color-text);
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .wordmark:hover {

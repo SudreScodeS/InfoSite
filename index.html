@@ -23,9 +23,9 @@
   <link rel="icon" href="./favicon-light.png" media="(prefers-color-scheme: light)">
   <link rel="icon" href="./favicon-dark.png" media="(prefers-color-scheme: dark)">
 
-  <link rel="stylesheet" href="./css/tokens.css?v=20260904b">
-  <link rel="stylesheet" href="./css/base.css?v=20260904b">
-  <link rel="stylesheet" href="./css/components.css?v=20260904b">
+  <link rel="stylesheet" href="./css/tokens.css?v=20260904r">
+  <link rel="stylesheet" href="./css/base.css?v=20260904r">
+  <link rel="stylesheet" href="./css/components.css?v=20260904r">
   <style>
     /* Critical hero — background-image, sem <img> no fluxo */
     .hero {
@@ -33,7 +33,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 70vh;
+      min-height: clamp(420px, 70vh, 640px);
       max-height: 640px;
       overflow: hidden;
       padding-top: 72px;
@@ -74,6 +74,15 @@
       padding: 48px 24px 56px;
       text-align: center;
       color: #f7f7fb;
+    }
+    @media (max-width: 768px) {
+      .hero {
+        min-height: min(78vh, 720px);
+        max-height: none;
+      }
+      .hero__content {
+        padding: 40px 16px 48px;
+      }
     }
   </style>
 </head>
